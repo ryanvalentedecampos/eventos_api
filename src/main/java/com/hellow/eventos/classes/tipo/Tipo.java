@@ -16,8 +16,8 @@ import org.hibernate.service.spi.InjectService;
 public class Tipo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-@ManyToOne
+    @Column(name="id")
+    private Integer id_tipo;
     private String descricao;
 
 

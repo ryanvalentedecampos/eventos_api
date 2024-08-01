@@ -25,8 +25,11 @@ public class Evento {
     private Date data;
     private String descricao;
     private Integer lotacao;
+    @ManyToOne
+    @JoinColumn(name="id_endereco")
     private Endereco endereco;
     @ManyToOne
+    @JoinColumn(name="id_tipo")
     private Tipo tipo;
 
 }
