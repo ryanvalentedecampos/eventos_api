@@ -6,25 +6,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name="cliente")
-@Table(name="cliente")
+import java.util.Date;
+
+@Entity(name="usuario")
+@Table(name="usuario")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cliente {
 
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-
-    private Integer cliente_id;
+    private Integer usuario_id;
     private String nome;
     private String sobrenome;
-    private Integer cpf;
-    private Integer telefone;
+    private String login;
+    private String senha;
+    private Date dt_nascimento;
+    private Date dt_criacao;
+    private Date dt_filiacao;
     private String email;
-
-
-
+    private Integer telefone;
+    private Integer cpf;
 }

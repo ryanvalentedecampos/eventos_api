@@ -20,7 +20,7 @@ import java.util.Date;
 public class Evento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer evento_id;
     private String nome;
     private Date data;
     private String descricao;
